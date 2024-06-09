@@ -1,31 +1,33 @@
 "use client";
 
-import axios from "axios";
-import { useEffect, useState } from "react"
-import { Article } from "./type/Article";
-export default function inicialPage() {
-    const [articles, setArticles ] = useState<Article[]>([])
 
-    useEffect(() => {
-        axios.get('api/route').then((response) => {
-            setArticles(response.data.articles)
-        })
-    }, [])
+import Link from "next/link";
+import { useFetch } from "./components/useFetch";
+
+export default function inicialPage() {
+   const { articles, loading } = useFetch()
 
         const filterArticles = articles.filter(articles => articles.title
         && articles.urlToImage).slice(0, 7)
+        
+        if(loading) {
+            return <p>Loading...</p>
+        }
 
     return (
         <div className="container">
-            <h1>Noticias do Dia</h1>
-            <div className="card-top"></div>
+            <h1>Noticias do dia</h1>
+            <div className="card-top">
             {filterArticles.map((articles, index) => (
-                <div key={index} className="card">
+                <div key={index} className="card">             
+                    <Link href={`/noticias/${index}/${articles.title}`}>
                     <img src={articles.urlToImage}></img>
                     <h1>{articles.title}</h1>
+                    </Link>
                     <p>{articles.description}</p>
                 </div>
             ))}     
-        </div>
+            </div>
+        </div> 
     )
 }
