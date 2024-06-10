@@ -1,6 +1,7 @@
 "use client";
 
-import { useFetch } from "@/app/components/useFetch";
+import ArticleDetail from "@/app/components/Detail";
+import { useFetch } from "@/app/hooks/useFetch";
 import { useParams} from "next/navigation";
 
 export default function noticiaDetail({}) {
@@ -19,13 +20,7 @@ export default function noticiaDetail({}) {
 
     return (
         <div className="container-detail">
-            <h1> Detalhe de noticia</h1>
-            <h1>{searchArticle?.title}</h1>
-            <p>{searchArticle?.description}</p>
-            <p>{searchArticle?.author}</p>
-            <p>{searchArticle?.publishedAt}</p>
-            <img src={searchArticle?.urlToImage}></img>
-            <p>{searchArticle?.content}</p>
+           <ArticleDetail searchArticle={searchArticle}/>
         </div>
     )
 }

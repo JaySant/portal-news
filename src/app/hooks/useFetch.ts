@@ -13,7 +13,6 @@ export const useFetch = () => {
             setArticles(response.data.articles)
             setLoading(false)
         })
-
     }, []);
 
     return {articles, loading};
