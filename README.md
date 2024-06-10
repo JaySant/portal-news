@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portal de Noticias
 
-## Getting Started
+O Projeto é um portal de noticias utilizando o [Next.js](https://nextjs.org). O site consome a API do [NewsApi](https://newsapi.org) para trazer as principais noticias do dia.
 
-First, run the development server:
+![Capa](public/capa.png)
+
+## Vamos começar
+
+Essas são as instruções para obter uma cópia do projeto operando na sua máquina local.
+
+### Pré-requisitos
+
+* Node.js
+* Conta na NewsAPI para obter a chave de API
+
+### 🔧 Instalação
+
+1. Clone o repositório
 
 ```bash
+git clone https://github.com/"Seu Usuario"/portal-news.git
+cd portal-news
+```
+2. Instale as dependências:
+```bash
+npm install
+```
+3. Configure a chave de API
+* Adicione a sua chave API no arquivo `.env.local` localizada raiz do projeto:
+```bash
+NEXT_PUBLIC_API_KEY=sua-chave-de-api-aqui
+```
+### Desenvolvimento
+Para rodar em modo desenvolvimento
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Construído com:
+* [Next.js](https://nextjs.org)
+* [NewsApi](https://newsapi.org)
+* [React](https://react.dev)
+* [Css Modules](https://github.com/css-modules/css-modules)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Licença
+Este projeto está licenciado sob a Licença MIT. Para mais informações [LICENSE](https://opensource.org/license/mit)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
