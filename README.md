@@ -1,8 +1,11 @@
+![Capa](public/capa.png)
+
 # Portal de Noticias
 
 O Projeto é um portal de noticias utilizando o [Next.js](https://nextjs.org). O site consome a API do [NewsApi](https://newsapi.org) para trazer as principais noticias do dia.
 
-![Capa](public/capa.png)
+[Design](public/design.png)
+
 
 ## Vamos começar
 

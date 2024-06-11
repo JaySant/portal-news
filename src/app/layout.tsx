@@ -1,5 +1,8 @@
 import Footer from "./components/footer"
 import Header from "./components/header"
+import Loading from "./components/Loading" 
+
+import './globals.css'
 
 export const metadata = {
   title: 'Next.js',

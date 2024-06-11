@@ -4,7 +4,8 @@ export interface Article {
     description?: string,
     urlToImage: string,
     content?: string,
-    publishedAt: string
+    publishedAt: string,
+    url: string | null
 }
 
 export interface ArticleDetail {

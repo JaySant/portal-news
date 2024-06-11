@@ -1,19 +1,20 @@
 import { CardArticle } from "../type/Article"
+import style from '../../../styles/Card.module.css'
 import Link from "next/link";
 
 export default function Card({filterArticles}: CardArticle) {
     return (
         <>
-        <main>
-            <h1>Noticias do dia</h1>
-            <div className="card-top">
+        <main className={style.main}>
+            <h1 className={style.title}>Noticias do dia</h1>
+            <div className={style.cards}>
             {filterArticles.map((articles, index) => (
-                <div key={index} className="card">             
+                <div key={index} className={`${style[`card-${index}`]}`}>             
                     <Link href={`/noticias/${index}/${articles.title}`}>
-                    <img src={articles.urlToImage}></img>
-                    <h1>{articles.title}</h1>
+                    <img src={articles.urlToImage}className={`${style.image} ${style[`img-${index}`]}`}></img>
+                    <h2 className={`${style.h2} ${style[`h2-${index}`]}`}>{articles.title}</h2>
                     </Link>
-                    <p>{articles.description}</p>
+                    <p className={style.p}>{articles.description}</p>
                 </div>
             ))}     
             </div>
