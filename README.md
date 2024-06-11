@@ -4,7 +4,7 @@
 
 O Projeto é um portal de noticias utilizando o [Next.js](https://nextjs.org). O site consome a API do [NewsApi](https://newsapi.org) para trazer as principais noticias do dia.
 
-[Design](public/design.png)
+![Design](public/design.png)
 
 
 ## Vamos começar
